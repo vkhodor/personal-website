@@ -2,25 +2,13 @@ markdown_extensions:
   - attr_list
   - tables
   - md_in_html
+  - def_list
 
 site_name: Victor's V. Khodorchenko Personal Page
 theme:
-  name: null
+  name: simple-blog
   theme_style: dark
-  custom_dir: 'mkdocs_simple_blog/'
-#nav:
-#  - About: test.md
-#  - CV: cv.md
-#  - Articles:
-#    - PostgreSQL:
-#      - articles/PostgreSQL/*
-#     - nav/steup
-#   - Kubernetes:
-#     - nav/k8s/intro.md
-#   - DNS:
-#     - nav/dns/intro.md
-#   - Ansible:
-#     - nav/ansible/intor.md
-#
-#  - Runbooks: runbboks.md
-
+  logo: assets/logo.png
+  components:
+    title: false
+    footer: false
