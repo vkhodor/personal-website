@@ -4,7 +4,7 @@ markdown_extensions:
   - md_in_html
   - def_list
 
-site_name: Victor's V. Khodorchenko Personal Page
+site_name: Victor's V. Personal Page
 theme:
   name: simple-blog
   theme_style: dark

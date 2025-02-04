@@ -1,9 +1,9 @@
 # Curriculum Vitae
-<div style="text-align: right"><i>updated 3 February 2025</i></div>
+<div style="text-align: right"><i>updated 4 February 2025</i></div>
 
-| ![img](assets/art.png){ width="250" } | __Victor V. Khodorchenko__<br>Male, born on 3 February 1984<br>+7 (913) 0671288 — preferred means of communication <br>v.khodor@gmail.com |
-|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-|                                       | Reside in: Novosibirsk<br>Citizenship: Russia, work permit at: Russia<br>Not ready to relocate, ready for rare business trips             |
+| ![img](assets/art.png){ width="250" } | __Victor V.__<br>Male, born in 1984<br>[@z00rr00](https://t.me/z00rr00) — preferred means of communication <br>v.khodor @ gmail.com |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                       | Not ready to relocate, ready for rare business trips                                                                                             |
 
 Desired position
 ===========================
@@ -24,14 +24,97 @@ Work experience (18 years 4 months)
 #### Briefly
 | Company                                                   | Site                                              | Description                   | Position                                |
 |-----------------------------------------------------------|---------------------------------------------------|-------------------------------|-----------------------------------------|
+| **NDA protected**<br>(Sep 2022 - now)                     | [NDA](https://en.wikipedia.org/wiki/Non-disclosure_agreement) | B2B, B2C, HighLoad | DevOps                                 | 
 | **Asteriosoft**<br>(Apr 2020 - Sep 2022)                  | [asteriosoft.com](https://asteriosoft.com/)       | B2B, AdTech, HighLoad         | DevOps, TeamLead                        |
-| **Openprovider**<br>(Mar 2018 - Mar 2020)                 | [openprovider.com](https://www.openprovider.com/) | B2B, Domain Registration, HighLoad | DevOps, TeamLead                        |
+| **Openprovider**<br>(Mar 2018 - Mar 2020)                 | [openprovider.com](https://www.openprovider.com/) | B2B, Domain Registration, HighLoad | DevOps, TeamLead                   |
 | **Utilex**<br>(Jan 2017 - May 2018)                       | [utilex.ru](https://www.openprovider.com)         | B2B, Mobile Data Center       | Python Developer                        |
 | **Novosibirsk State University**<br>(Nov 2006 - Mar 2018) | [nsu.ru](https://nsu.ru)                          | Education                     | Network Engeneer, Head of IT-departmemt |
 
 
 #### Details
 ----------------------------------------------------------------------------------------------------------------
+
+`NDA protected (September 2022 - now)`
+
+:  NDA protected, [NDA](https://en.wikipedia.org/wiki/Non-disclosure_agreement)
+
+   - Software Development
+   - HighLoad
+   - b2b, b2c
+
+   **DevOps engineer**
+
+   - the availability,
+   - performance,
+   - efficiency,
+   - change management,
+   - monitoring,
+   - emergency on-call duty,
+   - architecture solutions,
+   - automation of routine tasks
+
+   Areas of activity can be divided into three parts:
+
+   - Development (write scripts, services, fixing bugs and performance issues)
+   - Operations (os-level issues and projects. For instance, upgrade OS version or packages)
+   - DevOps (helping with CI/CD, writing deployments, Dockerfiles, pipe-lines)
+
+   **Technical stack:**
+
+   - *Infrastructure Management Tools:*
+     - Ansible (for os-level provisioning)
+     - Ansible Tower (AWX)
+     - Terraform (for cloud-level provisioning)
+   - *Clouds:*
+     - AWS
+     - EC2
+     - S3
+     - Lambda
+     - Bare-metal servers
+   - *Development infrastructure:*
+     - Gitlab
+     - Github
+     - gitlab-ci
+     - Docker Registry
+   - *Development:*
+     - bash (small tools, CI/CD)
+     - python (cli-tools, cronjobs, data-processing, aws lambdas, ansible filters)
+   - *Services infrastructure:*
+     - Kubernetes (Vanilla, kubespray)
+     - Docker
+     - HAProxy
+     - Nginx
+     - Kafka
+     - NATs
+     - Aerospike
+     - PostgreSQL (master-slave async replication, logical replication)
+     - MySQL (single node)
+     - ELK
+     - Redis
+     - keepalived
+     - dnsmasq, systemd-resolved, bind9, dnsdist
+     - consul
+     - consul-template
+     - cloud-init
+   - *Operation Systems:*
+     - Ubuntu
+   - *Backup Automation:*
+     - asbackup + ssh
+     - barman
+     - WAL-G + S3
+     - mysqldump
+   - *Monitoring:*
+     - Prometeus/Grafana
+     - Zabbix
+   - *Management Tools:*
+     - Redmine
+     - Youtrack
+     - Slack
+     - G Suite
+     - Telegram
+
+----------------------------------------------------------------------------------------------------------------
+   
 `Asteriosoft (April 2020 - September 2022)`  
 
 :  Novosibirsk, [asteriosoft.com](https://asteriosoft.com/)
