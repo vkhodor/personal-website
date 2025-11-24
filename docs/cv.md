@@ -1,5 +1,5 @@
 # Curriculum Vitae
-<div style="text-align: right"><i>updated 4 February 2025</i></div>
+<div style="text-align: right"><i>updated 24 November 2025</i></div>
 
 | ![img](assets/art.png){ width="250" } | __Victor V.__<br>Male, born in 1984<br>[@z00rr00](https://t.me/z00rr00) — preferred means of communication <br>v.khodor @ gmail.com |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,7 +17,7 @@ Employment: full time
 Work schedule: full day  
 Desired travel time to work: any  
 
-Work experience (18 years 4 months)
+Work experience (~19 years)
 ===================================
 ----------------------------------------------------------------------------------------------------------------
 
