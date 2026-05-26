@@ -1,5 +1,5 @@
 # Curriculum Vitae
-<div style="text-align: right"><i>updated 24 November 2025</i></div>
+<div style="text-align: right"><i>updated 26 May 2026</i></div>
 
 | ![img](assets/art.png){ width="250" } | __Victor V.__<br>Male, born in 1984<br>[@z00rr00](https://t.me/z00rr00) — preferred means of communication <br>v.khodor @ gmail.com |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
