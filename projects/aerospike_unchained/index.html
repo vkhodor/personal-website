@@ -1,0 +1,221 @@
+<!doctype html>
+<html data-bs-theme="dark">
+
+<head>
+    <title>Freeing Aerospike CE from Its Limits - Victor's V. Personal Page
+    </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+
+    
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    
+    
+
+    <script>var base_url = '../..';</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/root.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.min.css">
+    <link rel="stylesheet" href="../../assets/css/media.min.css">
+    <link rel="stylesheet" href="../../assets/css/mkdocstrings.min.css">
+    <script src="../../search/main.js"></script>
+
+    
+    
+    <style>
+        :root {
+            --text: white;
+            --title: white;
+            --primary: white;
+            --background: black;
+        }
+    </style>
+    
+    
+    
+</head>
+
+<body>
+    <div class="container py-3">
+        <header>
+            <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+            <img class="logo" src="../../assets/logo.png">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">Victor's V. Personal Page</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../..">[About]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../cv/">[Curriculum Vitae]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" active 
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Projects]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="./" class="dropdown-item text-decoration-none  active ">Freeing Aerospike CE from Its Limits</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+        </header>
+
+        <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+            
+            <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><h1 id="freeing-aerospike-ce-from-its-limits">Freeing Aerospike CE from Its Limits</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Most engineers working with high-load systems have likely heard of <a href="https://aerospike.com">Aerospike</a>.</p>
+<p>For those who still don't know what it is, here’s a short excerpt from the documentation:</p>
+<blockquote>
+<p>The high-performance, distributed, 
+NoSQL database designed for real-time applications requiring low latency and high availability.</p>
+</blockquote>
+<p>Basically, it’s a commercial product and it costs a ton of money. The price is so high that our small company simply can't afford it.</p>
+<p>However, Aerospike is distributed both as a commercial build and a community edition, which, although limited, was quite usable for production in older versions.</p>
+<p>Back then (about 10 years ago), our company adopted this DBMS and used it successfully.</p>
+<p>But as the years passed, with each new version, the free edition’s limits have become stricter and stricter. 
+Eventually, the restrictions became so severe that we couldn’t update anymore and got stuck somewhere around version 5 (the current release is version 8).</p>
+<p>As a result, we’re still running very old versions of Aerospike CE because, since v5, Aerospike has introduced limits that make it impossible to use effectively in production environments.</p>
+<p>Here are the restrictions I'm talking about:
+- cluster size limit — 8 nodes;
+- no more than 2 namespaces per cluster;
+- storage limit per node for unique data (don’t remember the exact figure for older versions, but for newer ones it’s just 640 GB).</p>
+<p>All the above prevents horizontal scaling and, consequently, creates problems for us and for development. The 640 GB storage limit per node, combined with the 8-node cluster cap, is precisely the problem that makes it impossible to use such a cluster in production.<br />
+Also, since we’re stuck on older Aerospike versions, we face cluster support issues that only get worse every year.</p>
+<p>In the past, we tried to purchase the commercial version, but it turns out their pricing for our use case is astronomical.  </p>
+<p>Thus, we’re blocked on outdated software, and our service codebase is so tied to Aerospike that migrating to an alternative would basically mean "never".</p>
+<p>This post proposes a solution to this problem.</p>
+<h2 id="solution">Solution</h2>
+<p>So, Aerospike is commercial software, but, guess what — the community edition source code is public.<br />
+And it’s not just any open-source license — it's under AGPLv3.<br />
+<a href="https://github.com/aerospike/aerospike-server/tree/master">Source here.</a></p>
+<p>This definitely gives us hope that we can tweak things for the better.</p>
+<p>Here’s what I discovered digging into the source:
+1. The sources are under AGPLv3 (excluding a few files as mentioned in the LICENSE file).
+2. There’s no complex logic preventing you from removing the limits.
+3. All the limits are deliberately enforced in the code via C preprocessor macros,<br />
+   and the files in question are under AGPLv3.</p>
+<p>Naturally, I couldn’t ignore this and went ahead to increase several limits, after which I built my own Aerospike binary:
+- cluster node limit is now 64;
+- namespace limit per cluster is now 32;
+- storage limit — infinity.</p>
+<h2 id="the-result">The Result</h2>
+<p>Actually, modifying the code is quite straightforward — just a few sed-commands.<br />
+So I wrote a Dockerfile and published it <a href="https://github.com/vkhodor/aerospike-unchained">here</a>.</p>
+<p>I built and tested the version and confirmed the limits have indeed been lifted. 
+I also ran performance tests to make sure everything still works fine, that the app doesn’t core dump or slow down.</p>
+<blockquote>
+<p><strong>Important!</strong> I haven’t yet tested this build in a real production cluster.<br />
+This is still on my to-do list.
+So, you’ll have to try this path on your own.</p>
+</blockquote></p>
+    </article>
+</section>
+<!-- endblock -->
+            
+
+        </main>
+
+        
+        <!-- block preview -->
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../../cv/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
+        </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+        </div>
+    </div>
+<!-- endblock -->
+        
+
+        
+        
+    </div>
+
+    <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/main.min.js"></script>
+    <script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
