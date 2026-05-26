@@ -53,11 +53,14 @@ Work experience (~19 years)
    - architecture solutions,
    - automation of routine tasks
 
-   Areas of activity can be divided into three parts:
+   Areas of activity can be divided into the next parts:
 
    - Development (write scripts, services, fixing bugs and performance issues)
    - Operations (os-level issues and projects. For instance, upgrade OS version or packages)
    - DevOps (helping with CI/CD, writing deployments, Dockerfiles, pipe-lines)
+   - Changing the infrastructure to enhance flexibility and stability
+   - Implementing IaC practices
+   - Replacing the legacy stack
 
    **Technical stack:**
 
@@ -98,6 +101,8 @@ Work experience (~19 years)
      - cloud-init
    - *Operation Systems:*
      - Ubuntu
+     - Debian
+     - Amazon Linux
    - *Backup Automation:*
      - asbackup + ssh
      - barman
