@@ -166,15 +166,19 @@ Also, since we’re stuck on older Aerospike versions, we face cluster support i
 And it’s not just any open-source license — it's under AGPLv3.<br />
 <a href="https://github.com/aerospike/aerospike-server/tree/master">Source here.</a></p>
 <p>This definitely gives us hope that we can tweak things for the better.</p>
-<p>Here’s what I discovered digging into the source:
-1. The sources are under AGPLv3 (excluding a few files as mentioned in the LICENSE file).
-2. There’s no complex logic preventing you from removing the limits.
-3. All the limits are deliberately enforced in the code via C preprocessor macros,<br />
-   and the files in question are under AGPLv3.</p>
-<p>Naturally, I couldn’t ignore this and went ahead to increase several limits, after which I built my own Aerospike binary:
-- cluster node limit is now 64;
-- namespace limit per cluster is now 32;
-- storage limit — infinity.</p>
+<p>Here’s what I discovered digging into the source:</p>
+<ol>
+<li>The sources are under AGPLv3 (excluding a few files as mentioned in the LICENSE file).</li>
+<li>There’s no complex logic preventing you from removing the limits.</li>
+<li>All the limits are deliberately enforced in the code via C preprocessor macros,<br />
+   and the files in question are under AGPLv3.</li>
+</ol>
+<p>Naturally, I couldn’t ignore this and went ahead to increase several limits, after which I built my own Aerospike binary:</p>
+<ul>
+<li>cluster node limit is now 64;</li>
+<li>namespace limit per cluster is now 32;</li>
+<li>storage limit — infinity.</li>
+</ul>
 <h2 id="the-result">The Result</h2>
 <p>Actually, modifying the code is quite straightforward — just a few sed-commands.<br />
 So I wrote a Dockerfile and published it <a href="https://github.com/vkhodor/aerospike-unchained">here</a>.</p>
