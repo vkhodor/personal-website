@@ -43,12 +43,14 @@ And it’s not just any open-source license — it's under AGPLv3.
 This definitely gives us hope that we can tweak things for the better.
 
 Here’s what I discovered digging into the source:
+
 1. The sources are under AGPLv3 (excluding a few files as mentioned in the LICENSE file).
 2. There’s no complex logic preventing you from removing the limits.
 3. All the limits are deliberately enforced in the code via C preprocessor macros,  
    and the files in question are under AGPLv3.
 
 Naturally, I couldn’t ignore this and went ahead to increase several limits, after which I built my own Aerospike binary:
+
 - cluster node limit is now 64;
 - namespace limit per cluster is now 32;
 - storage limit — infinity.
